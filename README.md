@@ -3,7 +3,7 @@
 This repository contains the implementation of Strong $r$-robustness maintenance Control Barrier Function-based Quadratic Programming (CBF-QP) Controller. This guarantees the multi-robot network to maintain the sufficient number of connections among robots such a way that the robots can achieve leader-follower consensus despite the presence of misbehaving agents. Contrary to the previous works that assume robots can maintain predetermined graph topologies with known robustness properties, our CBF directly addresses robustness without imposing any fixed topology. This allows the robots to flexiblely form reconfigurable communication networks with desired levels of strong $r$-robustness while navigating in spatially restrictive environments. The algorithm also includes inter-agent and obstacle collision avoidances encoded as additional CBFs. We present three different scenarios, whose videos are shown below. For more information, please refer to our paper.
 
 # Hardware Experiment
-Results for hardware experiments can be seen at [here](https://youtu.be/LHm5FXdm3-o).
+Results for hardware experiments can be seen [here](https://youtu.be/LHm5FXdm3-o).
 
 
 # Dependencies
