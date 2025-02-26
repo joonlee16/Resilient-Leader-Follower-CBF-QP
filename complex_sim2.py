@@ -102,7 +102,7 @@ def barrier_func(x):
         def body_i(i, inputs1):
             def body_j(j, inputs):
                 dis = R**2-jnp.sum((x[i]-x[j])**2)
-                return lax.cond(dis>=0,lambda x: inputs.at[i,j].set(sigmoid_A(dis**2)), lambda x: inputs.at[i,j].set(0), dis) 
+                return lax.cond(dis>=0,lambda x: inputs.at[i,j].set(sigmoid_A(dis**3)), lambda x: inputs.at[i,j].set(0), dis) 
             return lax.fori_loop(0, n, body_j, inputs1)
         A = lax.fori_loop(0, n, body_i, A)
 

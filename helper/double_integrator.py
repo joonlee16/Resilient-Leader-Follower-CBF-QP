@@ -45,7 +45,7 @@ class Agent:
         def model(t, y):
             dydt = self.f() @ y.reshape(4,-1) + self.g()@ self.U
             return dydt.reshape(-1,4)[0]
-        steps = solve_ivp(model, [0,0.025], self.location.reshape(-1,4)[0])
+        steps = solve_ivp(model, [0,0.02], self.location.reshape(-1,4)[0])
         self.prevprev = self.previous
         self.previous = self.x
         what = np.array([steps.y[0][-1], steps.y[1][-1],steps.y[2][-1],steps.y[3][-1]])
